@@ -25,7 +25,7 @@ fi
 echo $rapid7InstallScript
 
 #Installing Rapid7 using architecture specific script
-sudo sh $rapid7InstallScript uninstall --token eu:30a60af6-4870-4170-9a7f-95ae871682df
+sudo sh $rapid7InstallScript uninstall --token "tokenhere"
 
 
 #cleanup
