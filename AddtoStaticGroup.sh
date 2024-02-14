@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # server connection information
-URL="https://jamf.2u.com/"
-userName="jamfapi"
-password="jamfapi1234"
+URL=""
+userName=""
+password=""
 
 httpErrorCodes="200 Request successful
 201 Request to create or update object successful
