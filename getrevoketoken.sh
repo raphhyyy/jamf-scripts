@@ -1,8 +1,8 @@
 #!/bin/bash
 
-username="jamfapi"
-password="jamfapi1234"
-URL="https://jamf.2u.com"
+username=""
+password=""
+URL=""
 
 encodedCredentials=$( printf "${username}:${password}" | /usr/bin/iconv -t ISO-8859-1 | /usr/bin/base64 -i - )
 
