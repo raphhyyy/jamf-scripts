@@ -8,7 +8,7 @@ then
     echo "Crowdstrike missing. Proceeding with install."
 
     # Client ID, Client Secret for the API token. Then make a base64 version.
-    clientid=7f05fba025994c1ab47b2b36644b1df0   secret=0OdaxP6u7NEFv5VS8tUbR1A29ZiylkKQMmeC4hH3
+    clientid=""   secret=""
     b64creds=$( printf "$clientid:$secret" | /usr/bin/iconv -t ISO-8859-1 | /usr/bin/base64 -i - )
 
     # Set a default URL
