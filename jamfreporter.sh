@@ -1,11 +1,11 @@
 #!/bin/bash
-WEBHOOK_URL=https://hooks.slack.com/services/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
-IMAGE=https://avatars.slack-edge.com/2024-02-22/6671171719223_7a64ca34d95fb9d4f0e2_512.png
+WEBHOOK_URL=webhookhere
+IMAGE=imageurlhere
 
-JSS=https://twoudev.jamfcloud.com/
+JSS=urlhere
 # API Account that has read access to Jamf Pro Server Objects > Computers
-API_USER=jamfapi
-API_PW=jamfapi1234
+API_USER=usernamehere
+API_PW=passwordhere
 
 UDID=$(system_profiler SPHardwareDataType | grep "UUID" | sed s/"Hardware UUID: "/''/g | sed 's/^ *//')
 COMPUTER_NAME=$(scutil --get ComputerName)
