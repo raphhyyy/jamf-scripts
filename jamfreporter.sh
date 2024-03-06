@@ -23,12 +23,6 @@ TEXT="*Computer name:* $COMPUTER_NAME\n*Mac model:* $MODEL\n*macOS version:* $OS
 # Primary User Check - looks at computer's assigned 'endUsername' and then confirms that they are an fv enabled user
 PRIMARY_USER=$(/usr/bin/curl -H "Accept: application/xml" -H "Content-type: application/xml" -s -u "$API_USER":"$API_PW" "${JSS}/JSSResource/computers/udid/$UDID"/subset/Location | xpath /computer/location/username | sed -e 's/<username>//;s/<\/username>//')
 
-if [[ -z "$PRIMARY_USER" ]]
-then
-	PRIMARY_USE="Unassigned"
-fi
-
-TEXT="$TEXT*Primary User:* $PRIMARY_USER\n"
 
 if [[ "$PRIMARY_USER" != "Unassigned" ]]
 then
