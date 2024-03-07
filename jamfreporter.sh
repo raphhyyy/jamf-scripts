@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# Last Modified by Raphael Hernandez 03/7/2024
+
 WEBHOOK_URL=<SLACK WEBHOOK URL>
 IMAGE=<EXTERNALLY HOSTED IMAGE>
 
