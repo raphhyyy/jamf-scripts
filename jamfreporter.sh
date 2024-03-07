@@ -11,14 +11,14 @@ UDID=$(system_profiler SPHardwareDataType | grep "UUID" | sed s/"Hardware UUID: 
 COMPUTER_NAME=$(scutil --get ComputerName)
 
 SSID=2U Secure
-MODEL=$(system_profiler SPHardwareDataType | grep "Model Name" | sed 's/^[ \t]*//' | sed 's/Model Name: //g')
+SERIAL=$(system_profiler SPHardwareDataType | grep "Serial" | sed 's/^[ \t]*//' | sed 's/Serial: //g')
 OS_VERSION=$(/usr/bin/sw_vers -productVersion)
 
 # Danger status set to false
 danger=0
 
 TITLE="Mac Setup Completed"
-TEXT="*Computer name:* $COMPUTER_NAME\n*Mac model:* $MODEL\n*macOS version:* $OS_VERSION\n"
+TEXT="*Computer name:* $COMPUTER_NAME\n*Mac serial:* $SERIAL\n*macOS version:* $OS_VERSION\n"
  
 # Primary User Check - looks at computer's assigned 'endUsername' and then confirms that they are an fv enabled user
 PRIMARY_USER=$(/usr/bin/curl -H "Accept: application/xml" -H "Content-type: application/xml" -s -u "$API_USER":"$API_PW" "${JSS}/JSSResource/computers/udid/$UDID"/subset/Location | xpath /computer/location/username | sed -e 's/<username>//;s/<\/username>//')
